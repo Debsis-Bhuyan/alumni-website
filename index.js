@@ -4,7 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import path from "path";
-//securty packges
+
 import helmet from "helmet";
 import dbConnection from "./dbConfig/index.js";
 import errorMiddleware from "./middleware/errorMiddleware.js";
@@ -18,7 +18,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "views/build")));
 
-const PORT = process.env.PORT || 8800;
+const PORT = process.env.PORT || 8081;
 
 dbConnection();
 
